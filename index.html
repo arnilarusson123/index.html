@@ -4,21 +4,21 @@
   <meta charset="UTF-8" />
   <title>Árni Þór Lárusson · Actor & Voice Actor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Actor and voice actor Á rni Þór Lárusson (Arni Larusson) – film, TV, theatre and games. Showreel, headshots, credits and contact." />
+  <meta name="description" content="Actor and voice actor Árni Þór Lárusson (Arni Larusson) – film, TV, theatre and games. Showreel, headshots, credits and contact." />
 
-  <!-- Fonts: clean Miller-style vibe -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #f7f2eb;
+      --bg: #f6f3ef;
       --bg-alt: #ffffff;
-      --accent: #c6763b;
-      --accent-soft: rgba(198, 118, 59, 0.08);
-      --text-main: #1f1f23;
-      --text-muted: #7a7570;
-      --border-subtle: #e2d7c8;
-      --max-width: 1080px;
+      --text-main: #181716;
+      --text-muted: #8c847c;
+      --accent: #c26b3b;
+      --accent-soft: rgba(194, 107, 59, 0.12);
+      --border-subtle: #e3d8cd;
+      --max-width: 1120px;
     }
 
     * {
@@ -27,12 +27,16 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background-color: var(--bg);
       color: var(--text-main);
       -webkit-font-smoothing: antialiased;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     a {
@@ -47,41 +51,46 @@
     .page {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 32px 20px 72px;
+      padding: 40px 20px 80px;
     }
 
-    /* HEADER */
+    /* HEADER / NAV */
 
     header {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-end;
       border-bottom: 1px solid var(--border-subtle);
-      padding-bottom: 16px;
+      padding-bottom: 18px;
       margin-bottom: 32px;
+    }
+
+    .brand-block {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
     }
 
     .brand {
       font-family: "Playfair Display", serif;
-      font-size: 18px;
-      letter-spacing: 0.12em;
+      font-size: 20px;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
     }
 
     .brand-sub {
       font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.2em;
       color: var(--text-muted);
-      margin-top: 4px;
     }
 
     nav {
       display: flex;
       gap: 18px;
-      font-size: 12px;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.18em;
     }
 
     nav a {
@@ -98,7 +107,7 @@
       width: 0;
       height: 1px;
       background-color: var(--accent);
-      transition: width 0.15s ease;
+      transition: width 0.14s ease;
     }
 
     nav a:hover {
@@ -112,32 +121,39 @@
     /* HERO */
 
     .hero {
+      min-height: 72vh;
       display: grid;
       grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 32px;
-      margin-bottom: 56px;
-    }
-
-    .hero-main-title {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(34px, 4.4vw, 46px);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 8px;
+      gap: 42px;
+      align-items: center;
+      margin-bottom: 72px;
     }
 
     .hero-tagline {
-      font-size: 13px;
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 0.20em;
+      letter-spacing: 0.22em;
       color: var(--text-muted);
       margin-bottom: 18px;
+    }
+
+    .hero-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(40px, 5vw, 54px);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      line-height: 1.16;
+      margin-bottom: 16px;
     }
 
     .hero-intro {
       font-size: 15px;
       max-width: 520px;
       margin-bottom: 18px;
+    }
+
+    .hero-intro strong {
+      font-weight: 600;
     }
 
     .hero-intro em {
@@ -148,7 +164,7 @@
     .hero-meta {
       font-size: 13px;
       color: var(--text-muted);
-      margin-bottom: 24px;
+      margin-bottom: 28px;
     }
 
     .hero-meta span {
@@ -160,6 +176,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+      margin-bottom: 20px;
     }
 
     .btn {
@@ -169,9 +186,9 @@
       padding: 9px 18px;
       border-radius: 999px;
       border: 1px solid transparent;
-      font-size: 12px;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.18em;
       background-color: transparent;
       cursor: pointer;
       white-space: nowrap;
@@ -186,34 +203,35 @@
 
     .btn-primary:hover {
       transform: translateY(-1px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
     }
 
-    .btn-ghost {
+    .btn-soft {
       border-color: var(--border-subtle);
       color: var(--text-main);
-      background-color: rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.7);
     }
 
-    .btn-ghost:hover {
+    .btn-soft:hover {
       border-color: var(--accent);
       background-color: #fff;
     }
 
+    .hero-notes {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
     .hero-aside {
-      background-color: var(--bg-alt);
-      border-radius: 16px;
-      border: 1px solid var(--border-subtle);
-      padding: 18px 18px 16px;
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 16px;
     }
 
     .hero-photo {
-      border-radius: 12px;
-      overflow: hidden;
+      border-radius: 16px;
       border: 1px solid var(--border-subtle);
+      overflow: hidden;
       background-color: #ddd;
     }
 
@@ -224,7 +242,11 @@
       object-fit: cover;
     }
 
-    .hero-aside-block {
+    .hero-aside-card {
+      background-color: var(--bg-alt);
+      border-radius: 14px;
+      border: 1px solid var(--border-subtle);
+      padding: 14px 14px 12px;
       font-size: 13px;
     }
 
@@ -233,28 +255,29 @@
       text-transform: uppercase;
       letter-spacing: 0.18em;
       color: var(--text-muted);
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
-    .hero-credit-tags {
+    .hero-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 4px 8px;
-      margin-top: 4px;
     }
 
-    .hero-credit-tags span {
+    .hero-tags span {
       font-size: 11px;
       padding: 3px 8px;
       border-radius: 999px;
       border: 1px solid var(--border-subtle);
       background-color: var(--accent-soft);
+      white-space: nowrap;
     }
 
     /* SECTIONS */
 
     section {
-      margin-bottom: 56px;
+      margin-bottom: 64px;
+      scroll-margin-top: 80px;
     }
 
     .section-header {
@@ -262,20 +285,22 @@
       justify-content: space-between;
       align-items: flex-end;
       gap: 12px;
+      padding-top: 20px;
       margin-bottom: 20px;
+      border-top: 1px solid var(--border-subtle);
     }
 
     .section-title {
       font-family: "Playfair Display", serif;
-      font-size: 20px;
+      font-size: 18px;
       letter-spacing: 0.14em;
       text-transform: uppercase;
     }
 
     .section-sub {
-      font-size: 12px;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.2em;
       color: var(--text-muted);
     }
 
@@ -325,7 +350,7 @@
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 10px;
     }
 
@@ -353,7 +378,7 @@
 
     .credits-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 16px;
       font-size: 13px;
     }
@@ -362,16 +387,8 @@
       font-weight: 600;
       margin-bottom: 6px;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    .credit-list strong {
-      font-weight: 600;
-    }
-
-    .credit-list span {
       color: var(--text-muted);
     }
 
@@ -379,8 +396,12 @@
       margin-top: 6px;
     }
 
+    .credit-list strong {
+      font-weight: 600;
+    }
+
     .credits-footer {
-      margin-top: 14px;
+      margin-top: 16px;
       font-size: 12px;
       text-align: right;
     }
@@ -389,8 +410,8 @@
 
     .contact-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 22px;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+      gap: 24px;
       font-size: 14px;
     }
 
@@ -411,8 +432,9 @@
     .social-links {
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 8px;
       font-size: 13px;
+      margin-top: 12px;
     }
 
     .social-links a {
@@ -428,6 +450,71 @@
       margin-left: 6px;
     }
 
+    /* CONTACT FORM */
+
+    .contact-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 16px;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .field-group.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      font: inherit;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid var(--border-subtle);
+      background-color: #fdfaf6;
+      color: var(--text-main);
+      outline: none;
+      transition: border-color 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent-soft);
+      background-color: #fff;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .contact-form button {
+      justify-self: flex-start;
+      margin-top: 4px;
+    }
+
+    .form-footnote {
+      margin-top: 8px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* FOOTER */
+
     footer {
       margin-top: 32px;
       padding-top: 16px;
@@ -442,7 +529,7 @@
 
     /* RESPONSIVE */
 
-    @media (max-width: 860px) {
+    @media (max-width: 900px) {
       header {
         flex-direction: column;
         align-items: flex-start;
@@ -457,13 +544,17 @@
         grid-template-columns: 1fr;
       }
 
+      .hero-aside {
+        margin-top: 12px;
+      }
+
       .reel-layout,
       .contact-layout {
         grid-template-columns: 1fr;
       }
 
-      .hero-aside {
-        order: -1;
+      .contact-form {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -471,9 +562,9 @@
 <body>
   <div class="page">
     <header>
-      <div>
+      <div class="brand-block">
         <div class="brand">Árni Þór Lárusson</div>
-        <div class="brand-sub">Actor &amp; Voice Actor · Reykjavík, Iceland</div>
+        <div class="brand-sub">Actor &amp; Voice Actor · Reykjavík</div>
       </div>
       <nav>
         <a href="#reel">Showreel</a>
@@ -489,22 +580,26 @@
       <section class="hero" aria-label="Introduction">
         <div>
           <div class="hero-tagline">Film · Television · Theatre · Games</div>
-          <h1 class="hero-main-title">Actor &amp; voice actor<br>for character-driven stories.</h1>
+          <h1 class="hero-title">Actor &amp; voice actor<br>for character-led stories.</h1>
 
           <p class="hero-intro">
-            I’m Árni Þór Lárusson – an Icelandic actor and voice actor based in Reykjavík. I trained at the
-            London Academy of Music and Dramatic Art (LAMDA) and work across stage, film, television and
-            video games in both Icelandic and English.
+            I’m <strong>Árni Þór Lárusson</strong>, also known professionally as Arni Larusson – an Icelandic actor and
+            voice actor based in Reykjavík. I trained at the London Academy of Music and Dramatic Art (LAMDA) and work
+            across stage, film, television and video games in both Icelandic and English.
           </p>
 
           <p class="hero-meta">
-            <span><strong>Recent work:</strong> <em>The Darkness</em>, <em>True Detective: Night Country</em>, <em>Against the Ice</em></span>
+            <span><strong>Recent:</strong> <em>The Darkness</em> · <em>True Detective: Night Country</em> · <em>Against the Ice</em></span>
           </p>
 
           <div class="hero-buttons">
             <a class="btn btn-primary" href="#reel">Watch showreel</a>
-            <a class="btn btn-ghost" href="[link-to-your-cv.pdf]" target="_blank" rel="noopener">Download CV</a>
+            <a class="btn btn-soft" href="[link-to-your-cv.pdf]" target="_blank" rel="noopener">Download CV</a>
           </div>
+
+          <p class="hero-notes">
+            Available for screen, stage and voice work in Iceland and internationally.
+          </p>
         </div>
 
         <aside class="hero-aside">
@@ -513,18 +608,18 @@
             <img src="images/headshot-main.jpg" alt="Headshot of Árni Þór Lárusson" />
           </div>
 
-          <div class="hero-aside-block">
-            <div class="hero-label">Selected credits</div>
-            <div class="hero-credit-tags">
+          <div class="hero-aside-card">
+            <div class="hero-label">Screen credits</div>
+            <div class="hero-tags">
               <span>The Darkness · Bjartur</span>
               <span>True Detective: Night Country · Gordon</span>
               <span>Against the Ice · Minister’s Secretary</span>
             </div>
           </div>
 
-          <div class="hero-aside-block">
-            <div class="hero-label">Voice</div>
-            <div class="hero-credit-tags">
+          <div class="hero-aside-card">
+            <div class="hero-label">Voice &amp; games</div>
+            <div class="hero-tags">
               <span>Spider-Man: Across the Spider-Verse (IS)</span>
               <span>AC Valhalla – Wrath of the Druids</span>
               <span>Total War: Warhammer III</span>
@@ -537,7 +632,7 @@
       <section id="reel" aria-labelledby="reel-heading">
         <div class="section-header">
           <h2 class="section-title" id="reel-heading">Showreel</h2>
-          <div class="section-sub">Screen work</div>
+          <div class="section-sub">Selected screen work</div>
         </div>
 
         <div class="card reel-layout">
@@ -553,8 +648,8 @@
           <div class="reel-copy">
             <p>
               <strong>Showreel</strong> featuring work from <em>The Darkness</em>, <em>True Detective: Night Country</em>,
-              <em>Against the Ice</em>, and additional film and television projects. Individual scenes and self-tapes
-              can be shared on request.
+              <em>Against the Ice</em> and additional film and television projects. Individual scenes and self-tapes
+              are available on request.
             </p>
           </div>
         </div>
@@ -586,13 +681,13 @@
         </div>
 
         <div class="card about-text">
-          <p><strong>I’m Árni Þór Lárusson</strong>, also known professionally as Arni Larusson – an Icelandic actor and voice actor based in Reykjavík.</p>
+          <p>I’m an Icelandic actor and voice actor based in Reykjavík, working under the name <strong>Árni Þór Lárusson</strong> (Arni Larusson).</p>
 
           <p>I trained at the London Academy of Music and Dramatic Art (LAMDA) and work across Icelandic and international stage, film, television and video games. My recent screen work includes <em>The Darkness</em> (2024), <em>True Detective: Night Country</em> (2023) and the Netflix feature <em>Against the Ice</em> (2021).</p>
 
-          <p>At Reykjavík City Theatre I’ve appeared in productions such as <em>Macbeth</em> (as Malcolm), the musical <em>9 Líf</em> (as Bubbi Morthens), <em>Fyrrverandi</em> (as Bjartur), <em>Pinocchio</em> (title role), <em>Emil of Lönneberga</em> (as Erik the Auctioneer) and <em>Veisla</em> (as Berndsen).</p>
+          <p>At Reykjavík City Theatre (Borgarleikhúsið) I’ve appeared in productions such as <em>Macbeth</em> (as Malcolm), the musical <em>9 Líf</em> (as Bubbi Morthens), <em>Fyrrverandi</em> (as Bjartur), <em>Pinocchio</em> (title role), <em>Emil of Lönneberga</em> (as Erik the Auctioneer) and <em>Veisla</em> (as Berndsen).</p>
 
-          <p>In voice acting, I’ve played Peter Parker / Spider-Man in the Icelandic dub of <em>Spider-Man: Across the Spider-Verse</em>, Sichfrith in <em>Assassin’s Creed Valhalla – Wrath of the Druids</em>, and the Lord of Khorne in <em>Total War: Warhammer III</em>.</p>
+          <p>In voice acting, I’ve played Peter Parker / Spider-Man in the Icelandic dub of <em>Spider-Man: Across the Spider-Verse</em>, Sichfrith in <em>Assassin’s Creed Valhalla – Wrath of the Druids</em> and the Lord of Khorne in <em>Total War: Warhammer III</em>.</p>
 
           <p>I’m drawn to character-driven stories and enjoy collaborating with filmmakers, theatres and game studios. I’m open to new projects in Iceland and internationally.</p>
         </div>
@@ -664,18 +759,62 @@
             <p class="contact-note">
               For casting, availability and self-tapes, please contact my agency or reach out to me directly by email.
             </p>
+
+            <div class="social-links">
+              <a href="[your-imdb-link]" target="_blank" rel="noopener">
+                IMDb <span>Profile</span>
+              </a>
+              <a href="[your-spotlight-link]" target="_blank" rel="noopener">
+                Spotlight <span>View listing</span>
+              </a>
+              <a href="[your-instagram-link]" target="_blank" rel="noopener">
+                Instagram <span>@handle</span>
+              </a>
+            </div>
           </div>
 
-          <div class="social-links">
-            <a href="[your-imdb-link]" target="_blank" rel="noopener">
-              IMDb <span>Profile</span>
-            </a>
-            <a href="[your-spotlight-link]" target="_blank" rel="noopener">
-              Spotlight <span>View listing</span>
-            </a>
-            <a href="[your-instagram-link]" target="_blank" rel="noopener">
-              Instagram <span>@handle</span>
-            </a>
+          <div>
+            <!-- GET IN TOUCH FORM -->
+            <form
+              class="contact-form"
+              action="mailto:[you@yourdomain.com]"
+              method="POST"
+              enctype="text/plain"
+            >
+              <div class="field-group">
+                <label for="name">Name</label>
+                <input id="name" name="Name" type="text" required />
+              </div>
+
+              <div class="field-group">
+                <label for="email">Email</label>
+                <input id="email" name="Email" type="email" required />
+              </div>
+
+              <div class="field-group">
+                <label for="project">Enquiry type</label>
+                <select id="project" name="Enquiry type">
+                  <option>General casting enquiry</option>
+                  <option>Self-tape / audition request</option>
+                  <option>Theatre / stage project</option>
+                  <option>Voice / game project</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="field-group full">
+                <label for="message">Message</label>
+                <textarea id="message" name="Message" required></textarea>
+              </div>
+
+              <div class="field-group full">
+                <button type="submit" class="btn btn-primary">Send message</button>
+                <p class="form-footnote">
+                  This form uses your email client to send a message. If it doesn’t open automatically,
+                  you can email me directly at <a href="mailto:[you@yourdomain.com]">[you@yourdomain.com]</a>.
+                </p>
+              </div>
+            </form>
           </div>
         </div>
       </section>
