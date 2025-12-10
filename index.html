@@ -4,10 +4,16 @@
   <meta charset="UTF-8" />
   <title>Árni Þór Lárusson · Actor & Voice Actor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Actor and voice actor Árni Þór Lárusson (Arni Larusson) – showreel, headshots, selected credits and contact." />
+  <meta
+    name="description"
+    content="Árni Þór Lárusson (Arni Larusson) – Icelandic actor and voice actor for film, television, theatre and video games. Showreel, headshots, credits and contact."
+  />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
 
   <style>
     :root {
@@ -20,9 +26,15 @@
       --max-width: 1120px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -36,7 +48,10 @@
       color: var(--accent);
       text-decoration: none;
     }
-    a:hover { text-decoration: underline; }
+
+    a:hover {
+      text-decoration: underline;
+    }
 
     .page {
       max-width: var(--max-width);
@@ -55,7 +70,11 @@
       margin-bottom: 24px;
     }
 
-    .brand-block { display: flex; flex-direction: column; gap: 2px; }
+    .brand-block {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
 
     .brand {
       font-family: "Playfair Display", serif;
@@ -96,10 +115,15 @@
       transition: width 0.14s ease;
     }
 
-    nav a:hover { color: var(--text-main); }
-    nav a:hover::after { width: 100%; }
+    nav a:hover {
+      color: var(--text-main);
+    }
 
-    /* HERO / REEL-FOCUSED TOP */
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* HERO */
 
     .hero {
       margin: 32px 0 40px;
@@ -135,7 +159,10 @@
       color: var(--text-muted);
     }
 
-    .hero-sub strong { font-weight: 600; color: var(--text-main); }
+    .hero-sub strong {
+      font-weight: 600;
+      color: var(--text-main);
+    }
 
     .hero-buttons {
       display: flex;
@@ -167,7 +194,7 @@
 
     .btn-primary:hover {
       transform: translateY(-1px);
-      box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
     }
 
     .btn-soft {
@@ -185,41 +212,33 @@
       color: var(--text-muted);
     }
 
-    .hero-meta em { font-style: normal; }
+    .hero-meta em {
+      font-style: normal;
+    }
 
-    .hero-reel {
+    .hero-photo {
       border-radius: 18px;
       border: 1px solid var(--border-subtle);
       background-color: var(--surface);
       padding: 10px;
-      box-shadow: 0 12px 32px rgba(0,0,0,0.03);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.03);
     }
 
-    .reel-embed {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
+    .hero-photo-inner {
       border-radius: 12px;
-      background-color: #000;
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      background-color: #e1ded9;
     }
 
-    .reel-embed iframe {
-      position: absolute;
-      inset: 0;
+    .hero-photo-inner img {
       width: 100%;
-      height: 100%;
-      border: 0;
+      height: auto;
+      display: block;
+      object-fit: cover;
     }
 
-    .reel-note {
-      margin-top: 8px;
-      font-size: 12px;
-      color: var(--text-muted);
-      text-align: right;
-    }
-
-    /* SECTION HEADERS */
+    /* SECTIONS */
 
     section {
       margin-bottom: 48px;
@@ -257,6 +276,40 @@
       padding: 16px 16px 18px;
     }
 
+    /* REEL */
+
+    .reel-wrapper {
+      border-radius: 14px;
+      border: 1px solid var(--border-subtle);
+      background-color: var(--surface);
+      padding: 10px;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.03);
+    }
+
+    .reel-embed {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      background-color: #000;
+    }
+
+    .reel-embed iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .reel-note {
+      margin-top: 8px;
+      font-size: 12px;
+      color: var(--text-muted);
+      text-align: right;
+    }
+
     /* GALLERY */
 
     .gallery-grid {
@@ -275,12 +328,17 @@
       background-color: #e1ded9;
     }
 
-    /* ABOUT (SHORT) */
+    /* ABOUT */
 
-    .about-text p + p { margin-top: 8px; }
-    .about-text p { font-size: 14px; }
+    .about-text p + p {
+      margin-top: 8px;
+    }
 
-    /* CREDITS (SHORT) */
+    .about-text p {
+      font-size: 14px;
+    }
+
+    /* CREDITS */
 
     .credits-grid {
       display: grid;
@@ -298,8 +356,13 @@
       color: var(--text-muted);
     }
 
-    .credit-list p + p { margin-top: 4px; }
-    .credit-list strong { font-weight: 600; }
+    .credit-list p + p {
+      margin-top: 4px;
+    }
+
+    .credit-list strong {
+      font-weight: 600;
+    }
 
     .credits-footer {
       margin-top: 12px;
@@ -316,8 +379,13 @@
       font-size: 14px;
     }
 
-    .contact-list { list-style: none; }
-    .contact-list li + li { margin-top: 6px; }
+    .contact-list {
+      list-style: none;
+    }
+
+    .contact-list li + li {
+      margin-top: 6px;
+    }
 
     .contact-note {
       font-size: 12px;
@@ -333,7 +401,10 @@
       margin-top: 10px;
     }
 
-    .social-links a { color: var(--text-main); }
+    .social-links a {
+      color: var(--text-main);
+    }
+
     .social-links span {
       font-size: 11px;
       text-transform: uppercase;
@@ -369,8 +440,7 @@
 
     input[type="text"],
     input[type="email"],
-    textarea,
-    select {
+    textarea {
       font: inherit;
       padding: 7px 9px;
       border-radius: 8px;
@@ -382,11 +452,10 @@
     }
 
     input:focus,
-    textarea:focus,
-    select:focus {
+    textarea:focus {
       border-color: var(--accent);
       background-color: #fff;
-      box-shadow: 0 0 0 1px rgba(194,107,59,0.1);
+      box-shadow: 0 0 0 1px rgba(194, 107, 59, 0.1);
     }
 
     textarea {
@@ -428,13 +497,17 @@
         gap: 8px;
       }
 
-      nav { flex-wrap: wrap; }
+      nav {
+        flex-wrap: wrap;
+      }
 
       .hero {
         grid-template-columns: 1fr;
       }
 
-      .hero-reel { order: -1; }
+      .hero-photo {
+        order: -1;
+      }
 
       .contact-layout {
         grid-template-columns: 1fr;
@@ -462,15 +535,15 @@
     </header>
 
     <main>
-      <!-- HERO: REEL + SHORT INTRO -->
-      <section class="hero" aria-label="Showreel and intro">
+      <!-- HERO -->
+      <section class="hero" aria-label="Introduction and highlight">
         <div class="hero-main">
           <div class="hero-label">Reykjavík, Iceland</div>
-          <h1 class="hero-title">Actor &amp; voice actor<br>for film, TV &amp; games.</h1>
+          <h1 class="hero-title">Actor &amp; voice actor<br />for film, TV &amp; games.</h1>
 
           <p class="hero-sub">
-            <strong>Árni Þór Lárusson</strong> (Arni Larusson) is an Icelandic actor and voice actor working in
-            film, television, theatre and video games in Icelandic and English.
+            <strong>Árni Þór Lárusson</strong> (Arni Larusson) is an Icelandic actor and voice actor working in film,
+            television, theatre and video games in Icelandic and English.
           </p>
 
           <div class="hero-buttons">
@@ -483,23 +556,37 @@
           </p>
         </div>
 
-        <div class="hero-reel">
-          <div class="reel-embed" id="reel">
-            <!-- Your real showreel embed -->
-            <iframe
-              src="https://www.youtube.com/embed/E2lUPV3fZZU"
-              title="Acting showreel – Árni Þór Lárusson"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <div class="reel-note">
-            Full acting showreel · additional clips and self-tapes available on request.
+        <div class="hero-photo">
+          <div class="hero-photo-inner">
+            <!-- Main hero headshot -->
+            <img src="headshot32.jpg" alt="Headshot of Árni Þór Lárusson" />
           </div>
         </div>
       </section>
 
-      <!-- GALLERY: HEADSHOTS / STILLS -->
+      <!-- SHOWREEL -->
+      <section id="reel" aria-labelledby="reel-heading">
+        <div class="section-header">
+          <h2 class="section-title" id="reel-heading">Showreel</h2>
+          <div class="section-sub">Screen work</div>
+        </div>
+
+        <div class="reel-wrapper">
+          <div class="reel-embed">
+            <iframe
+              src="https://www.youtube.com/embed/E2lUPV3fZZU"
+              title="Acting showreel – Árni Þór Lárusson"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="reel-note">
+            Full acting showreel. Additional clips and self-tapes available on request.
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
       <section id="gallery" aria-labelledby="gallery-heading">
         <div class="section-header">
           <h2 class="section-title" id="gallery-heading">Photos</h2>
@@ -508,19 +595,19 @@
 
         <div class="card">
           <div class="gallery-grid">
-            <!-- Using your real uploaded images -->
-            <img src="images/arni_moðurskip_32.JPG" alt="Headshot of Árni Þór Lárusson" />
-            <img src="images/arni_moðurskip_114.JPG" alt="Headshot of Árni Þór Lárusson" />
-            <img src="images/arni_moðurskip_172.JPG" alt="Headshot of Árni Þór Lárusson" />
-            <img src="images/arni_moðurskip_193.JPG" alt="Headshot of Árni Þór Lárusson" />
-            <img src="images/arni_moðurskip_206.JPG" alt="Headshot of Árni Þór Lárusson" />
-            <img src="images/arni_moðurskip_62.JPG" alt="Headshot of Árni Þór Lárusson" />
-            <img src="images/arni_moðurskip_96.JPG" alt="Headshot of Árni Þór Lárusson" />
+            <!-- Using your real uploaded headshots -->
+            <img src="headshot32.jpg" alt="Headshot of Árni Þór Lárusson" />
+            <img src="headshot114.jpg" alt="Headshot of Árni Þór Lárusson" />
+            <img src="headshot172.jpg" alt="Headshot of Árni Þór Lárusson" />
+            <img src="headshot193.jpg" alt="Headshot of Árni Þór Lárusson" />
+            <img src="headshot206.jpg" alt="Headshot of Árni Þór Lárusson" />
+            <img src="headshot62.jpg" alt="Headshot of Árni Þór Lárusson" />
+            <img src="headshot96.jpg" alt="Headshot of Árni Þór Lárusson" />
           </div>
         </div>
       </section>
 
-      <!-- ABOUT: VERY SHORT -->
+      <!-- ABOUT -->
       <section id="about" aria-labelledby="about-heading">
         <div class="section-header">
           <h2 class="section-title" id="about-heading">About</h2>
@@ -547,7 +634,7 @@
         </div>
       </section>
 
-      <!-- SELECTED CREDITS: SHORT -->
+      <!-- SELECTED CREDITS -->
       <section aria-labelledby="credits-heading">
         <div class="section-header">
           <h2 class="section-title" id="credits-heading">Selected credits</h2>
@@ -586,12 +673,13 @@
           </div>
 
           <div class="credits-footer">
+            <!-- Replace this with your real CV URL once uploaded -->
             <a href="[link-to-your-cv.pdf]" target="_blank" rel="noopener">Download full CV (PDF)</a>
           </div>
         </div>
       </section>
 
-      <!-- CONTACT: INFO + SIMPLE FORM -->
+      <!-- CONTACT -->
       <section id="contact" aria-labelledby="contact-heading">
         <div class="section-header">
           <h2 class="section-title" id="contact-heading">Contact</h2>
@@ -601,7 +689,11 @@
         <div class="card contact-layout">
           <div>
             <ul class="contact-list">
-              <li><strong>Email:</strong> <a href="mailto:[you@yourdomain.com]">[you@yourdomain.com]</a></li>
+              <li>
+                <strong>Email:</strong>
+                <!-- Replace with your actual email -->
+                <a href="mailto:[you@yourdomain.com]">[you@yourdomain.com]</a>
+              </li>
               <li><strong>Based in:</strong> Reykjavík, Iceland</li>
               <li><strong>Agency:</strong> [Móðurskipið / The Mothership – agent name · contact]</li>
             </ul>
