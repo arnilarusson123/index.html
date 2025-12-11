@@ -330,16 +330,13 @@
       max-height: 280px;
     }
 
-    /* ABOUT / CREDITS */
+    /* ABOUT */
 
-    .about-block {
+    .about-card {
       border-radius: 16px;
       border: 1px solid var(--border-subtle);
       background-color: var(--surface);
       padding: 16px 18px;
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
-      gap: 24px;
     }
 
     .about-text p + p {
@@ -348,6 +345,29 @@
 
     .about-text p {
       font-size: 14px;
+    }
+
+    /* CREDITS */
+
+    .credits-block {
+      border-radius: 16px;
+      border: 1px solid var(--border-subtle);
+      background-color: var(--surface);
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .credits-intro {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .credits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
     }
 
     .credits-column-title {
@@ -499,7 +519,6 @@
         max-width: 320px;
       }
 
-      .about-block,
       .contact-block {
         grid-template-columns: 1fr;
       }
@@ -522,6 +541,8 @@
         <a href="#actor">Actor</a>
         <a href="#reel">Reel</a>
         <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#credits">Credits</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -608,14 +629,14 @@
         </div>
       </section>
 
-      <!-- ABOUT / SELECTED CREDITS -->
-      <section aria-labelledby="about-heading">
+      <!-- ABOUT -->
+      <section id="about" aria-labelledby="about-heading">
         <div class="section-heading-block">
           <div class="section-kicker">Profile</div>
-          <h2 class="section-title" id="about-heading">About &amp; selected credits</h2>
+          <h2 class="section-title" id="about-heading">About</h2>
         </div>
 
-        <div class="about-block">
+        <div class="about-card">
           <div class="about-text">
             <p>
               I’m an Icelandic actor and voice actor based in Reykjavík. I trained at the London Academy of Music and
@@ -634,22 +655,56 @@
               <em>Total War: Warhammer III</em>.
             </p>
           </div>
+        </div>
+      </section>
 
-          <div>
-            <div class="credits-column-title">Selected screen</div>
-            <div class="credits-list">
-              <p><strong>The Darkness</strong> (TV) – Bjartur</p>
-              <p><strong>True Detective: Night Country</strong> (TV) – Gordon</p>
-              <p><strong>Against the Ice</strong> (Film) – Minister’s Secretary</p>
-              <p><strong>Vegferð</strong> (TV) – Nói</p>
+      <!-- CREDITS -->
+      <section id="credits" aria-labelledby="credits-heading">
+        <div class="section-heading-block">
+          <div class="section-kicker">Credits</div>
+          <h2 class="section-title" id="credits-heading">Selected credits</h2>
+        </div>
+
+        <div class="credits-block">
+          <p class="credits-intro">
+            A selection of screen, stage and voice &amp; game credits. Full CV and detailed credit list available on
+            request.
+          </p>
+
+          <div class="credits-grid">
+            <div>
+              <div class="credits-column-title">Screen</div>
+              <div class="credits-list">
+                <p><strong>The Darkness</strong> · TV series · Role: Bjartur</p>
+                <p><strong>True Detective: Night Country</strong> · TV series · Role: Gordon</p>
+                <p><strong>Against the Ice</strong> · Feature film · Role: Minister’s Secretary</p>
+                <p><strong>Vegferð</strong> · TV series · Role: Nói</p>
+              </div>
             </div>
 
-            <div style="margin-top: 14px;">
-              <div class="credits-column-title">Selected stage</div>
+            <div>
+              <div class="credits-column-title">Stage</div>
               <div class="credits-list">
-                <p><strong>Macbeth</strong> – Malcolm · Reykjavík City Theatre</p>
-                <p><strong>9 Líf</strong> – Bubbi Morthens · Reykjavík City Theatre</p>
-                <p><strong>Fyrrverandi</strong> – Bjartur · Reykjavík City Theatre</p>
+                <p><strong>Macbeth</strong> · Role: Malcolm · Reykjavík City Theatre</p>
+                <p><strong>9 Líf</strong> · Role: Bubbi Morthens · Reykjavík City Theatre</p>
+                <p><strong>Fyrrverandi</strong> · Role: Bjartur · Reykjavík City Theatre</p>
+                <p><strong>Pinocchio</strong> · Reykjavík City Theatre</p>
+                <p><strong>Emil of Lönneberga</strong> · Reykjavík City Theatre</p>
+              </div>
+            </div>
+
+            <div>
+              <div class="credits-column-title">Voice &amp; Games</div>
+              <div class="credits-list">
+                <p>
+                  <strong>Spider-Man: Across the Spider-Verse</strong> · Icelandic dub · Peter Parker / Spider-Man
+                </p>
+                <p>
+                  <strong>Assassin’s Creed Valhalla – Wrath of the Druids</strong> · Video game · Sichfrith
+                </p>
+                <p>
+                  <strong>Total War: Warhammer III</strong> · Video game · Lord of Khorne
+                </p>
               </div>
             </div>
           </div>
@@ -668,11 +723,10 @@
             <ul class="contact-list">
               <li>
                 <strong>Email:</strong>
-                <!-- replace with your real email -->
-                <a href="mailto:[you@yourdomain.com]">[you@yourdomain.com]</a>
+                <a href="mailto:bokanir@modurskipid.is">bokanir@modurskipid.is</a>
               </li>
               <li><strong>Based in:</strong> Reykjavík, Iceland</li>
-              <li><strong>Agency:</strong> [Móðurskipið / The Mothership – agent name · contact]</li>
+              <li><strong>Agency:</strong> Móðurskipið / The Mothership</li>
             </ul>
 
             <p class="contact-note">
@@ -686,8 +740,8 @@
               <a href="https://www.spotlight.com/4217-7835-2096" target="_blank" rel="noopener">
                 Spotlight <span>View listing</span>
               </a>
-              <a href="[your-instagram-link]" target="_blank" rel="noopener">
-                Instagram <span>@handle</span>
+              <a href="https://www.instagram.com/arnilarusson/" target="_blank" rel="noopener">
+                Instagram <span>@arnilarusson</span>
               </a>
             </div>
           </div>
@@ -696,7 +750,7 @@
             <!-- Simple mailto contact form -->
             <form
               class="contact-form"
-              action="mailto:[you@yourdomain.com]"
+              action="mailto:bokanir@modurskipid.is"
               method="POST"
               enctype="text/plain"
             >
@@ -719,7 +773,7 @@
                 <button type="submit" class="btn btn-primary">Send message</button>
                 <p class="form-footnote">
                   This form opens your email client. If it doesn’t work, please email me directly at
-                  <a href="mailto:[you@yourdomain.com]">[you@yourdomain.com]</a>.
+                  <a href="mailto:bokanir@modurskipid.is">bokanir@modurskipid.is</a>.
                 </p>
               </div>
             </form>
