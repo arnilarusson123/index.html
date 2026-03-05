@@ -72,10 +72,10 @@ nav {
 .hero { position: relative; min-height: 100vh; display: flex; align-items: flex-end; overflow: hidden; background: var(--bg-warm); }
 
 .hero-image-wrap { position: absolute; inset: 0; z-index: 1; }
-.hero-image-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; filter: grayscale(0.3) contrast(1.1); }
+.hero-image-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: 70% 20%; filter: grayscale(0.3) contrast(1.1); }
 .hero-image-wrap::after {
   content: ''; position: absolute; inset: 0;
-  background: linear-gradient(to top, var(--bg-warm) 0%, rgba(12,11,9,0.7) 30%, rgba(12,11,9,0.15) 60%, rgba(12,11,9,0.3) 100%), linear-gradient(to right, rgba(12,11,9,0.6) 0%, transparent 50%);
+  background: linear-gradient(to top, var(--bg-warm) 0%, rgba(12,11,9,0.7) 30%, rgba(12,11,9,0.15) 60%, rgba(12,11,9,0.3) 100%), linear-gradient(to right, rgba(12,11,9,0.7) 0%, transparent 40%);
 }
 
 .hero-content { position: relative; z-index: 2; padding: clamp(32px, 6vw, 80px); padding-bottom: clamp(48px, 8vw, 100px); max-width: 900px; }
@@ -83,9 +83,12 @@ nav {
 .hero-eyebrow { font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; opacity: 0; animation: slideIn 0.8s 0.2s var(--ease) forwards; }
 .hero-name { font-family: var(--display); font-size: clamp(4rem, 12vw, 10rem); line-height: 0.9; letter-spacing: 0.04em; color: var(--text); margin-bottom: 20px; opacity: 0; animation: slideIn 0.8s 0.35s var(--ease) forwards; }
 .hero-name span { display: block; color: var(--gold); }
-.hero-tagline { font-family: var(--serif); font-size: clamp(1.1rem, 2.2vw, 1.5rem); font-style: italic; color: var(--text-secondary); margin-bottom: 12px; opacity: 0; animation: slideIn 0.8s 0.5s var(--ease) forwards; }
-.hero-meta { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 36px; opacity: 0; animation: slideIn 0.8s 0.6s var(--ease) forwards; }
-.hero-meta strong { color: var(--text-secondary); font-weight: 400; }
+.hero-tagline { font-family: var(--serif); font-size: clamp(1.1rem, 2.2vw, 1.5rem); font-style: italic; color: var(--text-secondary); margin-bottom: 20px; opacity: 0; animation: slideIn 0.8s 0.5s var(--ease) forwards; }
+
+.hero-stats { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 36px; opacity: 0; animation: slideIn 0.8s 0.6s var(--ease) forwards; }
+.hero-stat { display: flex; flex-direction: column; gap: 3px; }
+.hero-stat-label { font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); }
+.hero-stat-value { font-family: var(--display); font-size: 1.1rem; letter-spacing: 0.06em; color: var(--gold); }
 
 .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; opacity: 0; animation: slideIn 0.8s 0.7s var(--ease) forwards; }
 
@@ -112,6 +115,10 @@ section { padding: clamp(64px, 10vw, 120px) clamp(20px, 6vw, 80px); }
 .reel-embed { position: relative; padding-bottom: 56.25%; background: #000; overflow: hidden; }
 .reel-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
 .reel-caption { margin-top: 16px; font-size: 0.78rem; color: var(--text-dim); letter-spacing: 0.06em; }
+
+.reel-ext-links { display: flex; gap: 12px; justify-content: center; margin-top: 28px; flex-wrap: wrap; }
+.reel-ext-link { padding: 10px 20px; border: 1px solid rgba(255,255,255,0.08); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-secondary); transition: all 0.25s; }
+.reel-ext-link:hover { border-color: var(--gold); color: var(--gold); }
 
 #gallery { background: var(--bg); max-width: 1300px; margin: 0 auto; }
 .gallery-mosaic { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
@@ -211,6 +218,7 @@ footer { padding: 32px clamp(20px, 6vw, 80px); border-top: 1px solid rgba(212,16
   .hero-ctas { flex-direction: column; }
   .hero-ctas a { text-align: center; }
   .skills-grid { grid-template-columns: 1fr; }
+  .hero-stats { gap: 16px; }
 }
 </style>
 </head>
@@ -238,7 +246,24 @@ footer { padding: 32px clamp(20px, 6vw, 80px); border-top: 1px solid rgba(212,16
     <p class="hero-eyebrow">Actor · Voice Actor · Reykjavík</p>
     <h1 class="hero-name">ÁRNI ÞÓR<span>LÁRUSSON</span></h1>
     <p class="hero-tagline">Screen, stage &amp; voice — in Icelandic and English</p>
-    <p class="hero-meta"><strong>LAMDA trained</strong> · 6'0 · Playing age 19–34 · IS / EN / DA</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-label">Training</div>
+        <div class="hero-stat-value">LAMDA</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-label">Height</div>
+        <div class="hero-stat-value">6'0</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-label">Playing Age</div>
+        <div class="hero-stat-value">19–34</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-label">Languages</div>
+        <div class="hero-stat-value">IS / EN / DA</div>
+      </div>
+    </div>
     <div class="hero-ctas">
       <a href="#reel" class="btn-gold">
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
@@ -267,6 +292,11 @@ footer { padding: 32px clamp(20px, 6vw, 80px); border-top: 1px solid rgba(212,16
       </div>
     </div>
     <p class="reel-caption">3 showreels and 3 audio clips available on Spotlight</p>
+    <div class="reel-ext-links">
+      <a href="https://imdb.me/arnilarusson" target="_blank" class="reel-ext-link">IMDb</a>
+      <a href="https://www.spotlight.com/4217-7835-2096" target="_blank" class="reel-ext-link">Spotlight</a>
+      <a href="https://www.instagram.com/arnilarusson/" target="_blank" class="reel-ext-link">Instagram</a>
+    </div>
   </div>
 </section>
 
