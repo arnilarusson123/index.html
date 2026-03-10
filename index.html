@@ -462,13 +462,15 @@ footer { padding: 32px clamp(20px, 6vw, 80px); border-top: 1px solid rgba(212,16
       </div>
     </div>
     <div class="reveal">
-      <div class="contact-form" id="contactForm">
-        <div class="form-field"><label for="name">Name</label><input type="text" id="name" placeholder="Your name"></div>
-        <div class="form-field"><label for="email">Email</label><input type="email" id="email" placeholder="your@email.com"></div>
-        <div class="form-field"><label for="message">Message</label><textarea id="message" placeholder="Your message…"></textarea></div>
-        <button class="btn-gold" onclick="sendMail()" style="align-self:flex-start;">Send Message</button>
-        <p class="form-note">Opens your email client. Or email directly at <a href="mailto:modurskipid@modurskipid.is">modurskipid@modurskipid.is</a>.</p>
-      </div>
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/xykneonl" method="POST">
+        <div class="form-field"><label for="name">Name</label><input type="text" name="name" id="name" placeholder="Your name" required></div>
+        <div class="form-field"><label for="email">Email</label><input type="email" name="email" id="email" placeholder="your@email.com" required></div>
+        <div class="form-field"><label for="message">Message</label><textarea name="message" id="message" placeholder="Your message…" required></textarea></div>
+        <input type="hidden" name="_subject" value="New enquiry from arnilarusson.com">
+        <input type="hidden" name="_next" value="https://www.arnilarusson.com/#contact">
+        <button type="submit" class="btn-gold" style="align-self:flex-start;">Send Message</button>
+        <p class="form-note">Or email directly at <a href="mailto:modurskipid@modurskipid.is">modurskipid@modurskipid.is</a>.</p>
+      </form>
     </div>
   </div>
 </section>
@@ -492,14 +494,6 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal, .stagger-reveal').forEach(el => observer.observe(el));
-function sendMail() {
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const msg = document.getElementById('message').value;
-  const subject = encodeURIComponent('Enquiry from ' + name);
-  const body = encodeURIComponent('From: ' + name + '\nEmail: ' + email + '\n\n' + msg);
-  window.location.href = 'mailto:modurskipid@modurskipid.is?subject=' + subject + '&body=' + body;
-}
 </script>
 </body>
 </html>
